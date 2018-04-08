@@ -20,11 +20,11 @@ namespace CloudPointCalc.Model
             //{
             //    return (Vector3d)
             //};
-            Func<Vector3d, Vector3d> TransformF = (v1, v2) => {
-                return 
+            Func<Vector3d, Vector3d> TransformF = (v1) => {
+                return v1 += icp.Translation;
             };
-            Vector3d res = MeshTransforms.PerVertexTransform(source, );
-           
+            MeshTransforms.PerVertexTransform(source, TransformF);
+
         }
 
 
