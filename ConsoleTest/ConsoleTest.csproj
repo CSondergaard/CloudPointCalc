@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="geometry3Sharp" Version="1.0.144" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="pointmatcher.net">
+      <HintPath>..\..\..\pointmatcher.net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
