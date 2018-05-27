@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="geometry3Sharp" Version="1.0.144" />
+    <PackageReference Include="KdTree" Version="1.4.1" />
   </ItemGroup>
 
   <ItemGroup>
