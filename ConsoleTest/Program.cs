@@ -274,32 +274,27 @@ namespace KNN
                 
                 
             }
-           
 
 
+            double[][] tar = new double[tarlist.Count][];
 
-            //var tarver = target.Vertices();
-            //List<Vector3d> tarlist = tarver.ToList();
+            int i = 0;
+            foreach (var item in tarlist)
+            {
+                tar[i] = new double[] { item.x, item.y, 1 };
+                i++;
+            }
 
-            //double[][] tar = new double[tarlist.Count][];
+            int k = 3;
+            int numClasses = 300;
+            Console.WriteLine("With k = 3");
+            List<int> res = new List<int>();
+            foreach (var item in target.Vertices())
+            {
 
-            //int i = 0;
-            //foreach (var item in tarlist)
-            //{
-            //    tar[i] = new double[] {item.x, item.y,  1 };
-            //    i++;
-            //}
-
-            //int k = 3;
-            //int numClasses = 300;
-            //Console.WriteLine("With k = 3");
-            //List<int> res = new List<int>();
-            //foreach (var item in target.Vertices())
-            //{
-
-            //    double[] src = new double[] {item.x, item.y, item.z };
-            //    int predicted = Classify(src, tar, numClasses, k);
-            //}
+                double[] src = new double[] { item.x, item.y, item.z };
+                int predicted = Classify(src, tar, numClasses, k);
+            }
 
         }
 
